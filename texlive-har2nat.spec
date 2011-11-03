@@ -1,3 +1,9 @@
+# revision 17356
+# category Package
+# catalog-ctan /macros/latex/contrib/har2nat
+# catalog-date 2010-03-06 16:54:30 +0100
+# catalog-license lppl
+# catalog-version 1.0
 Name:		texlive-har2nat
 Version:	1.0
 Release:	1
@@ -44,6 +50,7 @@ after natbib, since it modifies natbib commands.
 %doc %{_texmfdistdir}/doc/latex/har2nat/README
 %doc %{_texmfdistdir}/doc/latex/har2nat/har2nat.pdf
 %doc %{_texmfdistdir}/doc/latex/har2nat/har2nat.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ after natbib, since it modifies natbib commands.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
