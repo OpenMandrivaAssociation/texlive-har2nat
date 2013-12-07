@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-har2nat
 Version:	1.0
-Release:	3
+Release:	4
 Summary:	Replace the harvard package with natbib
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/har2nat
