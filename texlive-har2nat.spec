@@ -1,18 +1,12 @@
-# revision 17356
-# category Package
-# catalog-ctan /macros/latex/contrib/har2nat
-# catalog-date 2010-03-06 16:54:30 +0100
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-har2nat
-Version:	1.0
-Release:	11
+Version:	54080
+Release:	1
 Summary:	Replace the harvard package with natbib
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/har2nat
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/har2nat.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/har2nat.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/har2nat.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/har2nat.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ natbib thus can be achieved simply by replacing
 after natbib, since it modifies natbib commands.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,24 +38,10 @@ after natbib, since it modifies natbib commands.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 752461
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 718599
-- texlive-har2nat
-- texlive-har2nat
-- texlive-har2nat
-- texlive-har2nat
-
