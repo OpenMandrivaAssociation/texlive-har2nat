@@ -1,6 +1,6 @@
 Name:		texlive-har2nat
 Version:	54080
-Release:	1
+Release:	2
 Summary:	Replace the harvard package with natbib
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/har2nat
