@@ -3,7 +3,7 @@ Version:	54080
 Release:	2
 Summary:	Replace the harvard package with natbib
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/har2nat
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/har2nat
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/har2nat.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/har2nat.doc.r%{version}.tar.xz
